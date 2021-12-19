@@ -6,9 +6,6 @@ If the first question is answered correctly, the person is allowed to attempt th
 Which question should be answered first to maximize the expected value of the total prize money received?
 '''
 
-p1 = 0.8 #question 1 correct
-p2 = 0.5 #question 2 correct
-
 def maximize_prize(p1, p2):
   #If Question 1 is answered first
   p1_100 = p1*(1-p2) #question 1 correct, question 2 incorrect
