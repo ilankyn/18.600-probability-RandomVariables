@@ -1,8 +1,9 @@
 '''
-Consider a quiz game where a person is given two questions and must decide which question to answer first. Question 1 will be answered correctly with probability 0.8, and the 
-person will then receive as prize $100, while question 2 will be answered correctly with probability 0.5, and the person will then receive as prize $200. If the first question 
-attempted is answered incorrectly, the quiz terminates, i.e., the person is not allowed to attempt the second question. If the first question is answered correctly, 
-the person is allowed to attempt the second question. Which question should be answered first to maximize the expected value of the total prize money received?
+Consider a quiz game where a person is given two questions and must decide which question to answer first. Question 1 will be answered correctly with probability 0.8, 
+and the person will then receive as prize $100, while question 2 will be answered correctly with probability 0.5, and the person will then receive as prize $200. 
+If the first question attempted is answered incorrectly, the quiz terminates, i.e., the person is not allowed to attempt the second question. 
+If the first question is answered correctly, the person is allowed to attempt the second question. 
+Which question should be answered first to maximize the expected value of the total prize money received?
 '''
 
 p1 = 0.8 #question 1 correct
