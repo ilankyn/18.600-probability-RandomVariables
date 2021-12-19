@@ -7,16 +7,18 @@ Which question should be answered first to maximize the expected value of the to
 '''
 p1 = 0.8 #question 1 correct
 p2 = 0.5 #question 2 correct
+v1 = 100 #prize money for question 1
+v2 = 200 #prize money for question 2
 
 def maximize_prize(p1, p2):
   #If Question 1 is answered first
-  p1_100 = p1*(1-p2) #question 1 correct, question 2 incorrect
-  p1_300 = p1*p2 #question 1 & 2 correct
-  mean_q1 = (p1_100*100) + (p1_300*300)
+  p1_v1 = p1*(1-p2) #question 1 correct, question 2 incorrect
+  p1_v1v2 = p1*p2 #question 1 & 2 correct
+  mean_q1 = (p1_v1*v1) + (p1_v1v2*(v1+v2))
   
   #If Question 2 is answered first
-  p2_200 = p2*(1-p1) #question 2 correct, question 1 incorrect
-  p2_300 = p2*p1 #question 1 & 2 correct
-  mean_q2 = (p2_200*200) + (p2_300*300)
+  p2_v2 = p2*(1-p1) #question 2 correct, question 1 incorrect
+  p1_v1v2 = p2*p1 #question 1 & 2 correct
+  mean_q2 = (p2_200*v2) + (p1_v1v2*(v1+v2))
   
   return f'Q1: {mean_q1}' if mean_q1 > mean_q2 else f'Q2: {mean_q2}'
